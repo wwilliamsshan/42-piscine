@@ -6,7 +6,7 @@
 /*   By: wshan <wshan@student.42.us.org>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/19 12:40:02 by wshan             #+#    #+#             */
-/*   Updated: 2018/05/19 16:03:56 by wshan            ###   ########.fr       */
+/*   Updated: 2018/05/19 16:28:14 by wshan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,12 +36,11 @@ int		ft_iterative_factorial(int nb)
 		result = result * nb;
 		nb = nb - 1;
 	}
-	ft_putint(result);
 	return (0);
 }
 
 int		main(void)
 {
-	ft_iterative_factorial(4);
+	ft_putint(ft_iterative_factorial(4));
 	return (0);
 }
