@@ -6,7 +6,7 @@
 /*   By: wshan <wshan@student.42.us.org>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/19 16:45:33 by wshan             #+#    #+#             */
-/*   Updated: 2018/05/19 17:05:46 by wshan            ###   ########.fr       */
+/*   Updated: 2018/05/19 17:13:25 by wshan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,6 @@ int		ft_recursive_power(int nb, int power)
 
 int		main(void)
 {
-	ft_putint(ft_recursive_power(2, 3));
+	ft_putint(ft_recursive_power(3, 3));
 	return (0);
 }
