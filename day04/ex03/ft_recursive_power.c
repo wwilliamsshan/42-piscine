@@ -6,11 +6,11 @@
 /*   By: wshan <wshan@student.42.us.org>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/19 16:45:33 by wshan             #+#    #+#             */
-/*   Updated: 2018/05/19 17:02:22 by wshan            ###   ########.fr       */
+/*   Updated: 2018/05/19 17:05:46 by wshan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include	<stdio.h>
+#include <stdio.h>
 
 void	ft_putint(int a)
 {
