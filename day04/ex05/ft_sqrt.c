@@ -6,7 +6,7 @@
 /*   By: wshan <wshan@student.42.us.org>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/19 19:31:24 by wshan             #+#    #+#             */
-/*   Updated: 2018/05/19 20:02:59 by wshan            ###   ########.fr       */
+/*   Updated: 2018/05/19 20:09:40 by wshan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,6 @@ int		ft_sqrt(int nb)
 
 int		main(void)
 {
-	ft_putint(ft_sqrt(10));
+	ft_putint(ft_sqrt(36));
 	return (0);
 }
