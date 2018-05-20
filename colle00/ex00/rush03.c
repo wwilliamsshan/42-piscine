@@ -3,72 +3,62 @@
 /*                                                        :::      ::::::::   */
 /*   rush03.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wshan <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: wshan <wshan@42.student.us.org>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/20 13:13:08 by wshan             #+#    #+#             */
-/*   Updated: 2018/05/20 15:00:00 by wshan            ###   ########.fr       */
+/*   Created: 2018/05/20 15:45:35 by wshan             #+#    #+#             */
+/*   Updated: 2018/05/20 16:46:58 by wshan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		rush03(int x, int y)
+void	top_or_bottom(int x)
 {
-	int ix;
-	int iy;
+	int	counter;
 
-	if (x < 1 || y < 1)
-	{
-		ft_putchar('X');
-		return (0);
-	}
-	if (x == 1 && y == 1)
-	{
-		ft_putchar('A');
-		ft_putchar('\n');
-		return (0);
-	}
+	counter = 1;
 	ft_putchar('A');
-	ix = -1;
-	while (ix < x - 3)
+	while (counter <= x - 1)
 	{
 		ft_putchar('B');
-		ix = ix + 1;
+		counter = counter + 1;
 	}
-	if (x != 1)
+	if (x > 1)
 	{
 		ft_putchar('C');
 	}
-	iy = -1;
-	while (iy < y - 3)
+	ft_putchar('\n');
+}
+
+void	middle(int x)
+{
+	int counter;
+
+	counter = 1;
+	ft_putchar('B');
+	while (counter <= x - 1)
 	{
-		ft_putchar('\n');
+		ft_putchar(' ');
+		counter = counter + 1;
+	}
+	if (x > 1)
+	{
 		ft_putchar('B');
-		ix = -1;
-		while (ix < x - 3)
-		{
-			ft_putchar(' ');
-			ix = ix + 1;
-		}
-		if (x != 1)
-		{
-			ft_putchar('B');
-		}
-		iy = iy + 1;	
-	}	
-	if (y != 1)
-	{
-		ft_putchar('\n');
-		ft_putchar('A');
-		ix = -1;
-		while (ix < x - 3)
-		{
-			ft_putchar('B');
-			ix = ix + 1;
-		}
-		if (x != 1)
-		{
-			ft_putchar('C');
-		}
 	}
 	ft_putchar('\n');
-	return (0);
+}
+
+void	rush(int x, int y)
+{
+	int counter;
+
+	counter = 1;
+	top_or_bottom(x);
+	while (counter < y - 1)
+	{
+		middle(x);
+		counter = counter + 1;
+	}
+	if (y > 1)
+	{
+		top_or_bottom(x);
+	}
 }
