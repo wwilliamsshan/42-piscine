@@ -6,14 +6,9 @@
 /*   By: wshan <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/20 13:13:08 by wshan             #+#    #+#             */
-/*   Updated: 2018/05/20 14:37:14 by wshan            ###   ########.fr       */
+/*   Updated: 2018/05/20 15:00:00 by wshan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
 
 int		rush03(int x, int y)
 {
@@ -28,6 +23,7 @@ int		rush03(int x, int y)
 	if (x == 1 && y == 1)
 	{
 		ft_putchar('A');
+		ft_putchar('\n');
 		return (0);
 	}
 	ft_putchar('A');
@@ -74,11 +70,5 @@ int		rush03(int x, int y)
 		}
 	}
 	ft_putchar('\n');
-	return (0);
-}
-
-int		main(void)
-{
-	rush03(4, 4);
 	return (0);
 }
