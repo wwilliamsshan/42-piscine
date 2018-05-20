@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_fibonacci.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wshan <wshan@student.42.us.org>            +#+  +:+       +#+        */
+/*   By: wshan <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/19 17:31:18 by wshan             #+#    #+#             */
-/*   Updated: 2018/05/19 17:41:47 by wshan            ###   ########.fr       */
+/*   Created: 2018/05/19 18:51:18 by wshan             #+#    #+#             */
+/*   Updated: 2018/05/19 19:05:03 by wshan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,7 @@ void	ft_putint(int a)
 
 int		ft_fibonacci(int index)
 {
-	if (index < 0)
-	{
-		return (-1);
-	}
-	else if (index == 0)
+	if (index == 0) 
 	{
 		return (0);
 	}
@@ -31,15 +27,15 @@ int		ft_fibonacci(int index)
 	{
 		return (1);
 	}
-	else
+	else 
 	{
-		return (ft_fibonacci(index - 1) + ft_fibonacci(index - 2));
+		return (ft_fibonacci(index - 1) + ft_fibonacci(index-2));
 	}
-	return (0);
+	return (0);	
 }
 
 int		main(void)
 {
-	ft_putint(ft_fibonacci(8));
+	ft_putint(ft_fibonacci(9));
 	return (0);
 }
