@@ -6,7 +6,7 @@
 /*   By: wshan <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/21 13:57:57 by wshan             #+#    #+#             */
-/*   Updated: 2018/05/21 15:21:27 by wshan            ###   ########.fr       */
+/*   Updated: 2018/05/21 16:22:48 by wshan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,11 @@ int		ft_atoi(char *str)
 	index = 0;
 	sign = 1;
 	result = 0;
-	if (str[index] == '-' || str[index] == ' ')
+	while (str[index] == ' ' || str[index] == '\t' || str[index] == '\n' || str[index] == '\v' || str[index] == '\f' || str[index] == '\r')
+	{
+		index = index + 1;
+	}
+	if (str[index] == '-')
 	{
 		sign = -1;
 		index = index + 1;
