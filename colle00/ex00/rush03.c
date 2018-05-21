@@ -6,7 +6,7 @@
 /*   By: wshan <wshan@42.student.us.org>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/20 15:45:35 by wshan             #+#    #+#             */
-/*   Updated: 2018/05/20 16:46:58 by wshan            ###   ########.fr       */
+/*   Updated: 2018/05/20 17:20:50 by wshan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	top_or_bottom(int x)
 
 	counter = 1;
 	ft_putchar('A');
-	while (counter <= x - 1)
+	while (counter < x - 1)
 	{
 		ft_putchar('B');
 		counter = counter + 1;
@@ -34,7 +34,7 @@ void	middle(int x)
 
 	counter = 1;
 	ft_putchar('B');
-	while (counter <= x - 1)
+	while (counter < x - 1)
 	{
 		ft_putchar(' ');
 		counter = counter + 1;
@@ -51,7 +51,10 @@ void	rush(int x, int y)
 	int counter;
 
 	counter = 1;
-	top_or_bottom(x);
+	if (x >= 1)
+	{
+		top_or_bottom(x);
+	}
 	while (counter < y - 1)
 	{
 		middle(x);
