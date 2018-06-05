@@ -6,7 +6,7 @@
 /*   By: wshan <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/04 10:54:53 by wshan             #+#    #+#             */
-/*   Updated: 2018/06/04 11:08:32 by wshan            ###   ########.fr       */
+/*   Updated: 2018/06/04 20:22:48 by wshan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,9 +33,9 @@ void	ft_putstr(char *str)
 char	*ft_strdup(char *src)
 {
 	int		i;
-	char	*copy;
 	int		length;
-	
+	char	*copy;
+
 	length = 0;
 	while (src[length] != '\0')
 	{
