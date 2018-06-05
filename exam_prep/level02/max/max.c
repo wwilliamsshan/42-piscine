@@ -6,9 +6,11 @@
 /*   By: wshan <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/04 20:25:10 by wshan             #+#    #+#             */
-/*   Updated: 2018/06/04 20:28:22 by wshan            ###   ########.fr       */
+/*   Updated: 2018/06/04 20:35:23 by wshan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <limits.h>
 
 int		max(int *tab, unsigned int len);
 {
@@ -16,7 +18,7 @@ int		max(int *tab, unsigned int len);
 	int				ret;
 
 	i = 0;
-	ret = -2147483648;
+	ret = INT_MIN;
 	if (tab[i])
 	{
 		while (i < len)
