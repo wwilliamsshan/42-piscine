@@ -6,7 +6,7 @@
 /*   By: wshan <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/04 15:39:39 by wshan             #+#    #+#             */
-/*   Updated: 2018/06/04 15:49:45 by wshan            ###   ########.fr       */
+/*   Updated: 2018/06/04 19:13:29 by wshan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putchar(char c)
 {
-	write(1, char c, 1);
+	write(1, &c, 1);
 }
 
 int		duplicate(char c, char *str, int pos)
@@ -24,7 +24,7 @@ int		duplicate(char c, char *str, int pos)
 	i = 0;
 	while (i < pos)
 	{
-		if (c == s1[i])
+		if (c == str[i])
 		{
 			return (1);
 		}
@@ -40,15 +40,15 @@ void	inter(char *str1, char *str2)
 
 	j = 0;
 	k = 0;
-	while (s1[j])
+	while (str1[j])
 	{
-		while (s2[k])
+		while (str2[k])
 		{
-			if (s1[j] == s2[k])
+			if (str1[j] == str2[k])
 			{
-				if (duplicate(s1[i], s1, i) == 0)
+				if (duplicate(str1[j], str1, j) == 0)
 				{
-					ft_putchar(s1[i]);
+					ft_putchar(str1[j]);
 					break ;
 				}
 			}
