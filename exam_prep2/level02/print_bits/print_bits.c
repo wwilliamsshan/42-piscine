@@ -6,13 +6,13 @@
 /*   By: wshan <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/06 22:05:43 by wshan             #+#    #+#             */
-/*   Updated: 2018/06/06 22:24:01 by wshan            ###   ########.fr       */
+/*   Updated: 2018/06/06 23:09:11 by wshan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_putchar(unsigned char c)
+void	ft_putchar(char c)
 {
 	write(1, &c, 1);
 }
@@ -32,7 +32,14 @@ void	print_bits(unsigned char octet)
 	i = 7;
 	while (i >= 0)
 	{
-		ft_putchar(temp[i]);
+		if (temp[i] == 0)
+		{
+			ft_putchar('0');
+		}
+		else
+		{
+			ft_putchar('1');
+		}
 		i--;
 	}
 }
